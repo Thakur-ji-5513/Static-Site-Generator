@@ -1,5 +1,5 @@
 from copy_function import copy_cont
-from page_generator import generate_page
+from page_generator import generate_page,generate_pages_recursive
 import os
 import shutil
 
@@ -15,6 +15,6 @@ def main():
 
     copy_cont(dir_path_static,dir_path_public)
     
-    generate_page("./content/index.md", "template.html", "./public/index.html")
+    generate_pages_recursive("./content", "template.html", "./public")
     
 main()
